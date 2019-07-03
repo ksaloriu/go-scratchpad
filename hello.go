@@ -31,7 +31,12 @@ func main() {
 	fmt.Println("slice3:", slice3)
 	fmt.Println("slice:", slice)
 
+	// maps
 
+	m := map[string]int{}
+	m["1"] = 1
+	m["2"] = 2
+	fmt.Println("m:", m)
 }
 
 
