@@ -6,6 +6,11 @@ func deferf() {
 	fmt.Println("Defer!")
 }
 
+type user struct {
+	name string
+	email string
+}
+
 func main() {
 	// run when this function exits
 	defer deferf()
@@ -37,6 +42,12 @@ func main() {
 	m["1"] = 1
 	m["2"] = 2
 	fmt.Println("m:", m)
+
+	// structs
+	var user1 user
+	user2 := user{"Nobody", "nobody@example.com"}
+	fmt.Println("user1:", user1)
+	fmt.Println("user2:", user2)
 }
 
 
