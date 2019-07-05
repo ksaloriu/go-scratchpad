@@ -11,6 +11,16 @@ type user struct {
 	email string
 }
 
+// method with value receiver
+func (u user) print() {
+	fmt.Printf("User: %s<%s>\n", u.name, u.email)
+}
+
+// method with pointer receiver
+func (u *user) changeEmail(email string) {
+	u.email = email
+}
+
 func main() {
 	// run when this function exits
 	defer deferf()
@@ -48,6 +58,11 @@ func main() {
 	user2 := user{"Nobody", "nobody@example.com"}
 	fmt.Println("user1:", user1)
 	fmt.Println("user2:", user2)
+
+	// methods
+	user2.print()
+	user2.changeEmail("foo@bar.com")
+	user2.print()
 }
 
 
