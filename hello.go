@@ -26,11 +26,10 @@ func main() {
 	defer deferf()
 	fmt.Println("Hello, World!")
 
-	// arrays:
+	// arrays
 	var numbers [5]int
 	// initialized to zero
 	fmt.Println("numbers:", numbers)
-
 	// create and init, infer length:
 	array := [...]int{1,2,3,4,5}
 	fmt.Println("array:", array)
@@ -47,7 +46,6 @@ func main() {
 	fmt.Println("slice:", slice)
 
 	// maps
-
 	m := map[string]int{}
 	m["1"] = 1
 	m["2"] = 2
@@ -59,6 +57,15 @@ func main() {
 	fmt.Println("user1:", user1)
 	fmt.Println("user2:", user2)
 
+	// pointers
+	value := 13
+	var p1 *int
+	p2 := &value
+	p1 = &value
+	fmt.Println("*p1:", *p1, " *p2:", *p2)
+	*p1 = 14
+	fmt.Println("*p1:", *p1, " *p2:", *p2)
+	
 	// methods
 	user2.print()
 	user2.changeEmail("foo@bar.com")
