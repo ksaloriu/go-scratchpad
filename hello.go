@@ -26,6 +26,13 @@ func main() {
 	defer deferf()
 	fmt.Println("Hello, World!")
 
+	// vars
+	var x int
+	x = 1
+	var y = 2
+	z := 3
+	fmt.Println("x:", x, " y:", y, " z:", z)
+	
 	// arrays
 	var numbers [5]int
 	// initialized to zero
