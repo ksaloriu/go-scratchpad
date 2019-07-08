@@ -11,7 +11,7 @@ func return_values() (string, int, string) {
 }
 
 type user struct {
-	name string
+	name  string
 	email string
 }
 
@@ -42,23 +42,23 @@ func main() {
 	fmt.Println("n1:", n1, " n2:", n2, " n3:", n3)
 	_, n4, _ := return_values()
 	fmt.Println("n4:", n4)
-	
+
 	// arrays
 	var numbers [5]int
 	// initialized to zero
 	fmt.Println("numbers:", numbers)
 	// create and init, infer length:
-	array := [...]int{1,2,3,4,5}
+	array := [...]int{1, 2, 3, 4, 5}
 	fmt.Println("array:", array)
 	// indexing
 	fmt.Println("array[3]:", array[3])
 
 	// slices
-	slice := []int{1,2,3,4,5}
+	slice := []int{1, 2, 3, 4, 5}
 	slice2 := slice[1:3]
 	fmt.Println("slice2:", slice2)
 	fmt.Println("cap(slice2):", cap(slice2))
-	slice3 := append(slice2, 10)	
+	slice3 := append(slice2, 10)
 	fmt.Println("slice3:", slice3)
 	fmt.Println("slice:", slice)
 
@@ -82,12 +82,9 @@ func main() {
 	fmt.Println("*p1:", *p1, " *p2:", *p2)
 	*p1 = 14
 	fmt.Println("*p1:", *p1, " *p2:", *p2)
-	
+
 	// methods
 	user2.print()
 	user2.changeEmail("foo@bar.com")
 	user2.print()
 }
-
-
-
