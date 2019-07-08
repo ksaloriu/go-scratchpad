@@ -6,6 +6,10 @@ func deferf() {
 	fmt.Println("Defer!")
 }
 
+func return_values() (string, int, string) {
+	return "1", 2, "3"
+}
+
 type user struct {
 	name string
 	email string
@@ -32,6 +36,12 @@ func main() {
 	var y = 2
 	z := 3
 	fmt.Println("x:", x, " y:", y, " z:", z)
+
+	// functions
+	n1, n2, n3 := return_values()
+	fmt.Println("n1:", n1, " n2:", n2, " n3:", n3)
+	_, n4, _ := return_values()
+	fmt.Println("n4:", n4)
 	
 	// arrays
 	var numbers [5]int
