@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+	"github.com/ksaloriu/go-scratchpad/util"
+)
+	
 func deferf() {
 	fmt.Println("Defer!")
 }
@@ -43,6 +46,9 @@ func main() {
 	_, n4, _ := return_values()
 	fmt.Println("n4:", n4)
 
+	// imports
+	fmt.Println("Exported_var:", util.Exported_var)
+	
 	// arrays
 	var numbers [5]int
 	// initialized to zero
